@@ -1,25 +1,25 @@
 {
-  "name": "postech-sso-dark",
-  "version": "1.0.0",
-  "description": "Dark usercss for POSTECH SSO login & portal.",
-  "main": "gulpfile.js",
-  "repository": "https://github.com/wldh-g/postech-sso-dark.git",
-  "author": "Jio <jio@wldh.org>",
-  "license": "UNLICENSED",
-  "private": true,
-  "scripts": {
-    "watch": "npx gulp watch",
-    "build": "npx gulp build"
-  },
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-header": "^2.0.9",
-    "gulp-sass": "^4.0.2",
-    "gulp-trim": "^1.0.2",
-    "moment": "^2.24.0",
-    "node-gyp": "^6.1.0",
-    "node-sass": "^4.13.1"
-  }
+	"name": "postech-sso-dark",
+	"version": "1.0.3",
+	"description": "Dark usercss for POSTECH SSO login & portal.",
+	"main": "gulpfile.js",
+	"repository": "https://github.com/wldh-g/postech-sso-dark.git",
+	"author": "Jio <jio@wldh.org>",
+	"license": "UNLICENSED",
+	"private": true,
+	"scripts": {
+		"watch": "npx gulp watch",
+		"build": "npx gulp build"
+	},
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-header": "^2.0.9",
+		"gulp-sass": "^4.0.2",
+		"gulp-trim": "^1.0.2",
+		"node-gyp": "^6.1.0",
+		"node-sass": "^4.13.1",
+		"update-json-file": "^1.1.1"
+	}
 }

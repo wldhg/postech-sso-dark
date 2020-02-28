@@ -1,12 +1,9 @@
 @import "../common";
 
-$icon: 50px;
-
 @mixin iconReplace($image, $width, $height) {
   &, &-eng {
     p::after {
       content: '';
-      width: $icon;
       display: table-cell;
       left: 0;
       top: 0;

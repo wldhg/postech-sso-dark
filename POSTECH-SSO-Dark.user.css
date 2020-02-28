@@ -9,374 +9,92 @@
 @preprocessor default
 ==/UserStyle== */
 
-@-moz-document domain("login.postech.ac.kr") {
-* {
-  --bg: #111;
-  --bg-weak: #333;
-  --bg-weak-lv2: #555;
-  --fg: #eee;
-  --fg-weak: #aaa;
-  --gold: #bba078;
-}
+@-moz-document domain("login.postech.ac.kr") { body { background-color: #111; color: #eee; }
+  header { padding-bottom: 8px; color: #aaa; }
+  header .header_utill { margin-top: 7px; }
+  header .header_utill > a { cursor: pointer; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/hamburger-off.png); }
+  header .header_utill > a:hover, header .header_utill > a:focus { color: #eee; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/hamburger-on.png); }
+  header .header_utill > ul { z-index: 10; color: #111; font-weight: 600; }
+  .visual { position: relative; margin-bottom: 30px; }
+  .visual::before { content: ''; width: 100%; top: 0; bottom: 0; position: absolute; background-color: #111; opacity: .6; display: block; z-index: 0; }
+  .visual p { position: relative; color: #eee; cursor: default; }
+  .search_ro { margin-bottom: 15px; }
+  .search_ro .search_ro_container { border-color: #333; transition: border-color 0.2s ease-in-out; width: calc(100% - 60px); }
+  .search_ro .search_ro_container .search_type_list ul li:hover a, .search_ro .search_ro_container .search_type_list ul li.active a { color: #eee; }
+  .search_ro .search_ro_container .search_type_list ul li a:focus { color: #eee; }
+  .search_ro .search_ro_container .input_box input[type="text"] { background-color: #333; color: #aaa; transition: background-color 0.2s ease-in-out; }
+  .search_ro .search_ro_container .input_box input[type="text"]:hover { background-color: #444; }
+  .search_ro .search_ro_container .input_box input[type="text"]:focus { outline: none; background-color: #555; color: #eee; }
+  .search_ro .search_ro_container .search_btn_box input[type="button"] { filter: grayscale(1) brightness(1); transition: -webkit-filter 0.2s ease-in-out; transition: filter 0.2s ease-in-out; transition: filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out; }
+  .search_ro .search_ro_container .search_btn_box input[type="button"]:hover, .search_ro .search_ro_container .search_btn_box input[type="button"]:focus { filter: grayscale(0) !important; }
+  .search_ro:hover .search_ro_container .search_btn_box input[type="button"] { filter: grayscale(1) brightness(2); }
+  #eng .search_ro .search_ro_container .search_type_list { left: -30px; }
+  @media screen and (max-width: 930px) { .search_ro .search_ro_container .search_btn_box { bottom: -2.5px; right: -7.5px; }
+    .search_ro .search_ro_container .search_btn_box input[type="button"] { filter: grayscale(1) brightness(2); }
+    .search_ro .search_ro_container .input_box input[type="text"] { width: calc(100% - 40px); }
+    .search_ro:hover .search_ro_container .search_btn_box input[type="button"] { filter: grayscale(1) brightness(3.5); } }
+  .icon_wrap { background-color: transparent !important; min-height: 170px; border-bottom: 1px solid #333; padding: 30px 0; }
+  .icon_wrap:last-of-type { border-bottom: none; }
+  .icon_wrap .title01 { padding: 0; margin: 0; width: 110px; height: 110px; border: 8px solid #bba078; border-radius: 0%; background-color: transparent; }
+  .icon_wrap .title01 > p { color: #bba078; cursor: default; }
+  .icon_wrap ul.w06 li { width: calc(20% - 2px); min-width: 110px; margin-bottom: 0; height: 110px; }
+  .icon_wrap ul li a { height: 90px; padding: 10px 0; }
+  .icon_wrap ul li a p { background: transparent; border: none; width: 70px; height: 70px; padding: 10px; transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; border-radius: 0; }
+  .icon_wrap ul li a p img { width: auto; max-height: 50px; }
+  .icon_wrap ul li a:hover p, .icon_wrap ul li a:focus p { transform: scale(1.2); background-color: rgba(187, 160, 120, 0.15); border: none; box-shadow: none; }
+  .icon_wrap ul li span { margin-top: 5px; font-size: 15px; line-height: 20px; cursor: default; color: #eee !important; }
+  @media screen and (max-width: 930px) { .icon_wrap { margin-top: 20px; }
+    .icon_wrap ul.w06 li { margin-bottom: 20px; } }
+  #postech-povis-web p::after, #postech-povis-web-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-povis.png); width: 66px; height: 14px; }
+  #postech-povis-web p img, #postech-povis-web-eng p img { display: none; }
+  #postech-povis-web p, #postech-povis-web-eng p { padding-left: 2px; padding-right: 2px; }
+  #postech-kyobo p::after, #postech-kyobo-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-kyobo.png); width: 60px; height: 45.95px; }
+  #postech-kyobo p img, #postech-kyobo-eng p img { display: none; }
+  #postech-kyobo p, #postech-kyobo-eng p { padding-left: 5px; padding-right: 5px; }
+  #postech-bookcube p::after, #postech-bookcube-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-bookcube.png); width: 50px; height: 50px; }
+  #postech-bookcube p img, #postech-bookcube-eng p img { display: none; }
+  #postech-bookzip p::after, #postech-bookzip-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-bookzip.png); width: 60px; height: 17px; }
+  #postech-bookzip p img, #postech-bookzip-eng p img { display: none; }
+  #postech-bookzip p, #postech-bookzip-eng p { padding-left: 5px; padding-right: 5px; }
+  #postech-moazine p::after, #postech-moazine-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-moazine.png); width: 60px; height: 21px; }
+  #postech-moazine p img, #postech-moazine-eng p img { display: none; }
+  #postech-moazine p, #postech-moazine-eng p { padding-left: 5px; padding-right: 5px; }
+  #postech-pipa p::after, #postech-pipa-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-pipa.png); width: 38px; height: 46px; }
+  #postech-pipa p img, #postech-pipa-eng p img { display: none; }
+  #postech-pipa p, #postech-pipa-eng p { padding-left: 16px; padding-right: 16px; }
+  #postech-pipa p, #postech-pipa-eng p { padding-top: 12px; padding-bottom: 12px; }
+  #postech-sdisk p::after, #postech-sdisk-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-sdisk.png); width: 50px; height: 49px; }
+  #postech-sdisk p img, #postech-sdisk-eng p img { display: none; }
+  #postech-hemos p, #postech-hemos-eng p { padding-left: 5px; padding-right: 5px; }
+  #postech-hemos p img, #postech-hemos-eng p img { width: 60px !important; }
+  footer { background-color: transparent; }
+  footer p { color: #aaa; cursor: default; }
+  .language a.on { color: #111; font-weight: 600; cursor: default; }
+  .language a:not(.on) { transition: background-color 0.2s ease-in-out; }
+  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); } }
 
-body {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-body #kor header, body #end header {
-  padding-bottom: 8px;
-  color: var(--fg-weak);
-}
-
-header .header_utill {
-  margin-top: 7px
-}
-.header_utill > a {
-  cursor: pointer;
-  background-image: url(https://i.imgur.com/3UONAUo.png)
-}
-.header_utill > a:hover, .header_utill > a:focus {
-  color: var(--fg);
-  background-image: url(https://i.imgur.com/NmJDfAI.png)
-}
-.header_utill ul {
-  z-index: 20;
-  color: var(--bg);
-  font-weight: 600;
-}
-
-.language a.on {
-  color: var(--bg);
-  font-weight: 600;
-  cursor: default;
-}
-.language a:not(.on):hover, .language a:not(.on):focus {
-  background-color: rgba(200, 200, 200, .4);
-}
-
-.visual {
-  position: relative;
-  margin-bottom: 30px;
-}
-.visual::before {
-  content: '';
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background-color: var(--bg);
-  opacity: .6;
-  display: block;
-  z-index: 0;
-}
-.visual p {
-  position: relative;
-  color: var(--fg);
-  cursor: default;
-}
-
-.search_ro {
-  margin-bottom: 15px;
-}
-.search_ro .search_ro_container {
-  border-color: var(--bg-weak);
-  transition: border-color .2s ease-in-out;
-  width: calc(100% - 60px);
-}
-.search_ro .search_ro_container .search_type_list ul li a:focus {
-  color: var(--fg);
-}
-.search_ro .search_ro_container .search_type_list ul li:hover a, .search_ro .search_ro_container .search_type_list ul li.active a {
-  color: var(--fg);
-}
-.search_ro .search_ro_container .input_box input[type="text"] {
-  background-color: var(--bg-weak);
-  color: var(--fg-weak);
-  transition: background-color .2s ease-in-out;
-}
-.search_ro .search_ro_container .input_box input[type="text"]:focus {
-  outline: none;
-  background-color: var(--bg-weak-lv2);
-  color: var(--fg);
-}
-.search_ro .search_ro_container .search_btn_box input[type="button"] {
-  filter: grayscale(1) brightness(1);
-  transition: filter .2s ease-in-out;
-}
-.search_ro:hover .search_ro_container .search_btn_box input[type="button"] {
-  filter: grayscale(1) brightness(2);
-}
-.search_ro .search_ro_container .search_btn_box input[type="button"]:hover, .search_ro .search_ro_container .search_btn_box input[type="button"]:focus {
-  filter: grayscale(0);
-}
-#eng .search_ro .search_ro_container .search_type_list {
-  left: -30px;
-}
-
-.icon_wrap, .icon_wrap.bggrey {
-  background-color: transparent;
-}
-.icon_wrap {
-  min-height: 170px;
-  border-bottom: 1px solid var(--bg-weak);
-  padding: 30px 0;
-}
-.icon_wrap:last-of-type {
-  border-bottom: none;
-}
-
-.title01 {
-  padding: 0;
-  margin: 0;
-  width: 110px;
-  height: 110px;
-  border: 8px solid var(--gold);
-  border-radius: 0%;
-  background-color: transparent;
-}
-.title01 > p {
-  color: var(--gold);
-  cursor: default;
-}
-
-.icon_wrap ul.w06 li {
-  width: calc(20% - 2px);
-  min-width: 110px;
-  margin-bottom: 0;
-  height: 110px;
-}
-.icon_wrap ul li a {
-  height: 90px;
-  padding: 10px 0;
-}
-.icon_wrap ul li a p {
-  background: transparent;
-  border: none;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-  border-radius: 0;
-}
-.icon_wrap ul li a:hover p, .icon_wrap ul li a:focus p {
-  transform: scale(1.2);
-  background-color: rgba(187, 160, 120, .2);
-  border: none;
-  box-shadow: none;
-}
-.icon_wrap ul li span {
-  margin-top: 5px;
-  font-size: 15px;
-  line-height: 15px;
-  cursor: default;
-  color: var(--fg) !important;
-}
-.icon_wrap ul li a p img {
-  width: auto;
-  max-height: 50px;
-}
-
-footer {
-  background-color: transparent;
-}
-footer p {
-  color: var(--fg-weak);
-  cursor: default;
-}
-
-/* custom image */
-#postech-povis-web p::after, #postech-kyobo p::after, #postech-bookcube p::after, #postech-bookzip p::after, #postech-moazine p::after, #postech-pipa p::after, #postech-sdisk p::after,
-#postech-povis-web-eng p::after, #postech-kyobo-eng p::after, #postech-bookcube-eng p::after, #postech-bookzip-eng p::after, #postech-moazine-eng p::after, #postech-pipa-eng p::after, #postech-sdisk-eng p::after {
-  content: '';
-  width: 50px;
-  display: table-cell;
-  left: 0;
-  top: 0;
-  background-size: cover;
-}
-#postech-povis-web p img, #postech-kyobo p img, #postech-bookcube p img, #postech-bookzip p img, #postech-moazine p img, #postech-pipa p img, #postech-sdisk p img,
-#postech-povis-web-eng p img, #postech-kyobo-eng p img, #postech-bookcube-eng p img, #postech-bookzip-eng p img, #postech-moazine-eng p img, #postech-pipa-eng p img, #postech-sdisk-eng p img {
-  display: none;
-}
-
-/* enlarge image */
-#postech-povis-web p, #postech-povis-web-eng p {
-  padding: 10px 0;
-}
-#postech-hemos p, #postech-kyobo p, #postech-bookzip p, #postech-moazine p,
-#postech-hemos-eng p, #postech-kyobo-eng p, #postech-bookzip-eng p, #postech-moazine-eng p {
-  padding: 10px 5px;
-}
-#postech-pipa p, #postech-pipa-eng p {
-  padding: 12px 16px;
-}
-
-/* put the image */
-#postech-povis-web p::after, #postech-povis-web-eng p::after {
-  background-image: url(https://i.imgur.com/V0C7hD3.png);
-  height: 15px;
-  width: 70px;
-}
-#postech-kyobo p::after, #postech-kyobo-eng p::after {
-  background-image: url(https://i.imgur.com/Ujtx5N8.png);
-  height: 45.95px;
-  width: 60px;
-}
-#postech-bookcube p::after, #postech-bookcube-eng p::after {
-  background-image: url(https://i.imgur.com/tmCyHRc.png);
-  width: 50px;
-  height: 50px;
-}
-#postech-bookzip p::after, #postech-bookzip-eng p::after {
-  background-image: url(https://i.imgur.com/JqwXpTI.png);
-  width: 60px;
-  height: 17px;
-}
-#postech-moazine p::after, #postech-moazine-eng p::after {
-  background-image: url(https://i.imgur.com/zyUmA6j.png);
-  width: 60px;
-  height: 21px;
-}
-#postech-pipa p::after, #postech-pipa-eng p::after {
-  background-image: url(https://i.imgur.com/60OOdHG.png);
-  height: 46px;
-  width: 38px;
-}
-#postech-sdisk p::after, #postech-sdisk-eng p::after {
-  background-image: url(https://i.imgur.com/Dz4BZQV.png);
-  height: 49px;
-  width: 50px;
-}
-
-/* only resize */
-#postech-hemos p img, #postech-hemos-eng p img {
-  width: 60px !important;
-}
-
-/* mobile */
-@media screen and (max-width: 930px) {
-  .icon_wrap {
-    margin-top: 20px;
-  }
-  .icon_wrap ul.w06 li {
-    margin-bottom: 20px;
-  }
-  .search_ro .search_ro_container .search_btn_box input[type="button"] {
-    filter: grayscale(1) brightness(2);
-  }
-  .search_ro:hover .search_ro_container .search_btn_box input[type="button"] {
-    filter: grayscale(1) brightness(3.5);
-  }
-  .search_ro .search_ro_container .input_box input[type="text"] {
-    width: calc(100% - 40px);
-  }
-  .search_ro .search_ro_container .search_btn_box {
-    bottom: -2.5px;
-    right: -7.5px;
-  }
-}
-}
-
-@-moz-document url-prefix("https://sso.postech.ac.kr/sso/usr/postech/login/view") {
-* {
-  --bg: #111;
-  --bg-weak: #333;
-  --bg-weak-lv2: #555;
-  --bg-weak-lv3: #444;
-  --fg: #eee;
-  --fg-weak-lv2: #ccc;
-  --fg-weak: #aaa;
-  --gold: #bba078;
-}
-
-body#login-bg {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-.language a.on {
-  color: var(--bg);
-  font-weight: 600;
-  cursor: default;
-}
-.language a:not(.on):hover, .language a:not(.on):focus {
-  background-color: rgba(200, 200, 200, .4);
-}
-
-.layer-wrap {
-  background-color: var(--bg-weak);
-  border: none;
-}
-.layer-wrap h1 {
-  margin: 16px auto 16px
-}
-.layer-wrap h2 {
-  color: var(--fg);
-}
-.layer-wrap h2 p {
-  color: var(--fg-weak);
-  margin-bottom: 26px;
-}
-.login_form ul li input {
-  background-color: var(--bg-weak-lv3);
-  color: var(--fg-weak-lv2);
-  transition: color .2s ease-in-out, background-color .2s ease-in-out;
-  border: none;
-}
-.login_form ul li input:focus {
-  outline: none;
-  color: var(--fg);
-  background-color: var(--bg-weak-lv2);
-}
-.login_form input[type="button"] {
-  cursor: pointer;
-}
-.login_form input[type="button"]:hover, .login_form input[type="button"]:focus {
-  background-color: #970c4d;
-}
-
-.checkbox {
-  float: right;
-  margin-right: 0;
-  margin-bottom: 20px;
-}
-.checkbox input[type="checkbox"] + label {
-  padding-top: 2px;
-}
-
-.login-utill {
-  border-top-color: var(--bg-weak-lv2);
-}
-.login-utill a {
-  color: var(--fg-weak);
-}
-.login-utill a::before {
-  background-image: url(https://i.imgur.com/TNoL6kj.png);
-}
-.login-utill a span {
-  margin-left: 5px;
-}
-.login-utill a:hover {
-  color: var(--fg);
-}
-.login-utill a:hover::before {
-  background-color: var(--fg);
-}
-
-footer.main {
-  margin-top: 10px;
-}
-footer.main p.c_gold {
-  color: var(--gold);
-}
-footer.main p {
-  color: var(--fg);
-}
-
-@media screen and (max-width: 430px) {
-  .login-utill a {
-    width: initial;
-  }
-}
-}
+@-moz-document url-prefix("https://sso.postech.ac.kr/sso/usr/postech/login/view") { body#login-bg { background-color: #111; color: #eee; }
+  .layer-wrap { background-color: #333; border: none; }
+  .layer-wrap h1 { margin: 16px auto 20px; }
+  .layer-wrap h2 { color: #eee; }
+  .layer-wrap h2 p { color: #aaa; margin-bottom: 26px; }
+  .layer-wrap ul li input { background-color: #444; color: #ccc; transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; border: none; }
+  .layer-wrap ul li input:hover { background-color: #555; }
+  .layer-wrap ul li input:focus { outline: none; color: #eee; background-color: #666; }
+  .layer-wrap input[type="button"] { cursor: pointer; }
+  .layer-wrap input[type="button"]:hover, .layer-wrap input[type="button"]:focus { background-color: #970c4d; }
+  .checkbox { float: right; margin-right: 0; margin-bottom: 20px; }
+  .checkbox input[type="checkbox"] + label { padding-top: 2px; }
+  .login-utill { border-top-color: #555; }
+  .login-utill a { color: #aaa; }
+  .login-utill a::before { background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/login-utill.png); }
+  .login-utill a span { margin-left: 5px; }
+  .login-utill a:hover { color: #eee; }
+  .login-utill a:hover::before { background-color: #eee; }
+  @media screen and (max-width: 430px) { .login-utill a { width: initial; } }
+  footer.main { margin-top: 10px; }
+  footer.main p { color: #eee; }
+  footer.main p.c_gold { color: #bba078; }
+  .language a.on { color: #111; font-weight: 600; cursor: default; }
+  .language a:not(.on) { transition: background-color 0.2s ease-in-out; }
+  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); } }

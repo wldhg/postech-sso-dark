@@ -3,6 +3,7 @@
 
 $box: 110px;
 $pad: 10px;
+$icon: 50px;
 $line-size: 20px;
 $font-size: 15px;
 
@@ -97,9 +98,9 @@ $font-size: 15px;
   &povis-web {
     @include iconReplace(
       "custom-povis.png",
-      70px, 15px,
+      66px, 14px,
     );
-    @include expandWidth(10px);
+    @include expandWidth(8px);
   }
 
   &kyobo {

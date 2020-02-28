@@ -25,9 +25,14 @@
       color: $fg-weak-lv2;
       transition: background-color $ts;
 
+      &:hover {
+        background-color: $bg-weak-lv2;
+      }
+
       &:focus {
         outline: none;
         background-color: $bg-weak-lv3;
+        color: $fg;
       }
     }
 
@@ -36,7 +41,7 @@
       transition: filter $ts;
 
       &:hover, &:focus {
-        filter: grayscale(0);
+        filter: grayscale(0) !important;
       }
     }
   }

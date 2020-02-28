@@ -6,7 +6,10 @@ const gHeader = require('gulp-header');
 const gSass = require('gulp-sass');
 const gAutoPrefixer = require('gulp-autoprefixer');
 
-const moment = require('moment');
+const updateJSON = require('update-json-file');
+
+// Get Package Information
+const version = '1.0.3';
 
 // Build style
 const buildSass = () => gulp.src([
@@ -14,14 +17,14 @@ const buildSass = () => gulp.src([
   './src/login/wrap.scss',
 ]).pipe(gSass({ outputStyle: 'compact' }))
   .pipe(gAutoPrefixer())
-  .pipe(gConcat('POSTECH-SSO-Dark-Test.user.css'))
+  .pipe(gConcat('POSTECH-SSO-Dark.user.css'))
   .pipe(gHeader(`
 
 /* ==UserStyle==
 @name         POSTECH Dark SSO
 @namespace    gist.github.com/wldh-g/0f63065237bc5831df10ae17fe96d2b4
 @homepageURL  https://github.com/wldh-g/postech-sso-dark
-@version      1.0.${moment().format('YYYYMMDDHHmmssSSS')}
+@version      ${version}
 @license      Other
 @description  This enables dark theme of POVIS SSO login page.
 @author       Jio Gim (https://github.com/wldh-g/)
@@ -35,6 +38,10 @@ const buildSass = () => gulp.src([
 const build = (resolve) => {
   try {
     buildSass();
+    updateJSON('./package.json', (pkg) => {
+      pkg.version = version;
+      return pkg;
+    });
   } catch (e) { console.error(e); } finally { resolve(); }
 };
 
