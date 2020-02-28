@@ -2,7 +2,7 @@
 @name         POSTECH Dark SSO
 @namespace    gist.github.com/wldh-g/0f63065237bc5831df10ae17fe96d2b4
 @homepageURL  https://github.com/wldh-g/postech-sso-dark
-@version      1.0.1
+@version      1.0.2
 @license      Other
 @description  This enables dark theme of POVIS SSO login page.
 @author       Jio Gim (https://github.com/wldh-g/)
@@ -185,7 +185,8 @@ footer p {
 }
 
 /* custom image */
-#postech-povis-web p::after, #postech-kyobo p::after, #postech-bookcube p::after, #postech-bookzip p::after, #postech-moazine p::after, #postech-pipa p::after, #postech-sdisk p::after {
+#postech-povis-web p::after, #postech-kyobo p::after, #postech-bookcube p::after, #postech-bookzip p::after, #postech-moazine p::after, #postech-pipa p::after, #postech-sdisk p::after,
+#postech-povis-web-eng p::after, #postech-kyobo-eng p::after, #postech-bookcube-eng p::after, #postech-bookzip-eng p::after, #postech-moazine-eng p::after, #postech-pipa-eng p::after, #postech-sdisk-eng p::after {
   content: '';
   width: 50px;
   display: table-cell;
@@ -193,60 +194,62 @@ footer p {
   top: 0;
   background-size: cover;
 }
-#postech-povis-web p img, #postech-kyobo p img, #postech-bookcube p img, #postech-bookzip p img, #postech-moazine p img, #postech-pipa p img, #postech-sdisk p img {
+#postech-povis-web p img, #postech-kyobo p img, #postech-bookcube p img, #postech-bookzip p img, #postech-moazine p img, #postech-pipa p img, #postech-sdisk p img,
+#postech-povis-web-eng p img, #postech-kyobo-eng p img, #postech-bookcube-eng p img, #postech-bookzip-eng p img, #postech-moazine-eng p img, #postech-pipa-eng p img, #postech-sdisk-eng p img {
   display: none;
 }
 
 /* enlarge image */
-#postech-povis-web p {
+#postech-povis-web p, #postech-povis-web-eng p {
   padding: 10px 0;
 }
-#postech-hemos p, #postech-kyobo p, #postech-bookzip p, #postech-moazine p {
+#postech-hemos p, #postech-kyobo p, #postech-bookzip p, #postech-moazine p,
+#postech-hemos-eng p, #postech-kyobo-eng p, #postech-bookzip-eng p, #postech-moazine-eng p {
   padding: 10px 5px;
 }
-#postech-pipa p {
+#postech-pipa p, #postech-pipa-eng p {
   padding: 12px 16px;
 }
 
 /* put the image */
-#postech-povis-web p::after {
+#postech-povis-web p::after, #postech-povis-web-eng p::after {
   background-image: url(https://i.imgur.com/V0C7hD3.png);
   height: 15px;
   width: 70px;
 }
-#postech-kyobo p::after {
+#postech-kyobo p::after, #postech-kyobo-eng p::after {
   background-image: url(https://i.imgur.com/Ujtx5N8.png);
   height: 45.95px;
   width: 60px;
 }
-#postech-bookcube p::after {
+#postech-bookcube p::after, #postech-bookcube-eng p::after {
   background-image: url(https://i.imgur.com/tmCyHRc.png);
   width: 50px;
   height: 50px;
 }
-#postech-bookzip p::after {
+#postech-bookzip p::after, #postech-bookzip-eng p::after {
   background-image: url(https://i.imgur.com/JqwXpTI.png);
   width: 60px;
   height: 17px;
 }
-#postech-moazine p::after {
+#postech-moazine p::after, #postech-moazine-eng p::after {
   background-image: url(https://i.imgur.com/zyUmA6j.png);
   width: 60px;
   height: 21px;
 }
-#postech-pipa p::after {
+#postech-pipa p::after, #postech-pipa-eng p::after {
   background-image: url(https://i.imgur.com/60OOdHG.png);
   height: 46px;
   width: 38px;
 }
-#postech-sdisk p::after {
+#postech-sdisk p::after, #postech-sdisk-eng p::after {
   background-image: url(https://i.imgur.com/Dz4BZQV.png);
   height: 49px;
   width: 50px;
 }
 
 /* only resize */
-#postech-hemos p img {
+#postech-hemos p img, #postech-hemos-eng p img {
   width: 60px !important;
 }
 
