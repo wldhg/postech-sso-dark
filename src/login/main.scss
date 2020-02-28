@@ -1,0 +1,80 @@
+@import "../common";
+
+.layer-wrap {
+  background-color: $bg-weak-lv1;
+  border: none;
+
+  h1 {
+    margin: 16px auto 16px;
+  }
+
+  h2 {
+    color: $fg;
+
+    p {
+      color: $fg-weak-lv2;
+      margin-bottom: 26px;
+    }
+  }
+
+  ul li input {
+    background-color: $bg-weak-lv2;
+    color: $fg-weak-lv1;
+    transition: color $ts, background-color $ts;
+    border: none;
+
+    &:focus {
+      outline: none;
+      color: $fg;
+      background-color: $bg-weak-lv3;
+    }
+  }
+
+  input[type="button"] {
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: $postech-dark;
+    }
+  }
+}
+
+.checkbox {
+  float: right;
+  margin-right: 0;
+  margin-bottom: 20px;
+
+  input[type="checkbox"] + label {
+    padding-top: 2px;
+  }
+}
+
+.login-utill {
+  border-top-color: $bg-weak-lv3;
+
+  a {
+    color: $fg-weak-lv2;
+
+    &::before {
+      background-image: img("login-utill.png");
+    }
+
+    span {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: $fg;
+
+      &::before {
+        background-color: $fg;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .login-utill a {
+    width: initial;
+  }
+}

@@ -1,0 +1,78 @@
+@import "../common";
+
+.search_ro {
+  margin-bottom: 15px;
+
+  .search_ro_container {
+    border-color: $bg-weak-lv1;
+    transition: border-color $ts;
+    width: calc(100% - 60px);
+
+    .search_type_list ul li {
+      &:hover, &.active {
+        a {
+          color: $fg;
+        }
+      }
+
+      a:focus {
+        color: $fg;
+      }
+    }
+
+    .input_box input[type="text"] {
+      background-color: $bg-weak-lv1;
+      color: $fg-weak-lv2;
+      transition: background-color $ts;
+
+      &:focus {
+        outline: none;
+        background-color: $bg-weak-lv3;
+      }
+    }
+
+    .search_btn_box input[type="button"] {
+      filter: grayscale(1) brightness(1);
+      transition: filter $ts;
+
+      &:hover, &:focus {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &:hover {
+    .search_ro_container .search_btn_box input[type="button"] {
+      filter: grayscale(1) brightness(2);
+    }
+  }
+}
+
+#eng .search_ro .search_ro_container .search_type_list {
+  left: -30px;
+}
+
+@media screen and (max-width: 930px) {
+  .search_ro {
+    .search_ro_container {
+      .search_btn_box {
+        bottom: -2.5px;
+        right: -7.5px;
+
+        input[type="button"] {
+          filter: grayscale(1) brightness(2);
+        }
+      }
+
+      .input_box input[type="text"] {
+        width: calc(100% - 40px);
+      }
+    }
+
+    &:hover {
+      .search_ro_container .search_btn_box input[type="button"] {
+        filter: grayscale(1) brightness(3.5);
+      }
+    }
+  }
+}

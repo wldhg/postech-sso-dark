@@ -1,0 +1,49 @@
+@import "../common";
+
+header {
+  padding-bottom: 8px;
+  color: $fg-weak-lv2;
+
+  .header_utill {
+    margin-top: 7px;
+
+    & > a {
+      cursor: pointer;
+      background-image: img("hamburger-off.png");
+
+      &:hover, &:focus {
+        color: $fg;
+        background-image: img("hamburger-on.png");
+      }
+    }
+
+    & > ul {
+      z-index: 10;
+      color: $bg;
+      font-weight: 600;
+    }
+  }
+}
+
+.visual {
+  position: relative;
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: $bg;
+    opacity: .6;
+    display: block;
+    z-index: 0;
+  }
+
+  p {
+    position: relative;
+    color: $fg;
+    cursor: default;
+  }
+}

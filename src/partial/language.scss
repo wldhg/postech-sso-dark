@@ -1,0 +1,18 @@
+@import "../common";
+
+.language {
+  a.on {
+    color: $bg;
+    font-weight: 600;
+    cursor: default;
+  }
+
+  a:not(.on) {
+    transition: background-color $ts-time ease-in-out;
+
+    &:hover, &:focus {
+      transition: none;
+      background-color: rgba(200, 200, 200, .4);
+    }
+  }
+}

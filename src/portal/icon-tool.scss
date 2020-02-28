@@ -1,0 +1,53 @@
+@import "../common";
+
+$icon: 50px;
+
+@mixin iconReplace($image, $width, $height) {
+  &, &-eng {
+    p::after {
+      content: '';
+      width: $icon;
+      display: table-cell;
+      left: 0;
+      top: 0;
+      background-size: cover;
+      background-image: img($image);
+      width: $width;
+      height: $height;
+    }
+
+    p img {
+      display: none;
+    }
+  }
+}
+
+@mixin expandWidth($amount) {
+  &, &-eng {
+    p {
+      padding-left: 10px - $amount;
+      padding-right: 10px - $amount;
+    }
+  }
+}
+
+@mixin expandHeight($amount) {
+  &, &-eng {
+    p {
+      padding-top: 10px - $amount;
+      padding-bottom: 10px - $amount;
+    }
+  }
+}
+
+@mixin resizeImage($width, $height: null) {
+  &, &-eng {
+    p img {
+      width: $width !important;
+
+      @if $height != null {
+        height: $height;
+      }
+    }
+  }
+}

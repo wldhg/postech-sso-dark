@@ -1,0 +1,11 @@
+@import "../common";
+
+@-moz-document url-prefix("https://sso.postech.ac.kr/sso/usr/postech/login/view") {
+
+  @import "body";
+  @import "main";
+  @import "footer";
+
+  @import "../partial/language";
+
+}

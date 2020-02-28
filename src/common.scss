@@ -1,0 +1,23 @@
+// Variables
+$image-location: "https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/";
+
+$bg: #111;
+$bg-weak-lv1: #333;
+$bg-weak-lv2: #444;
+$bg-weak-lv3: #555;
+
+$fg: #eee;
+$fg-weak-lv1: #ccc;
+$fg-weak-lv2: #aaa;
+
+$gold: #bba078;
+$postech-dark: #970c4d;
+
+$ts-time: .2s;
+$ts-fn: ease-in-out;
+$ts: #{$ts-time} #{$ts-fn};
+
+// Functions
+@function img($name) {
+  @return #{url(#{$image-location + $name})};
+}

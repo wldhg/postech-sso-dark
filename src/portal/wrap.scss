@@ -1,0 +1,13 @@
+@import "../common";
+
+@-moz-document domain("login.postech.ac.kr") {
+
+  @import "body";
+  @import "header";
+  @import "search-box";
+  @import "main";
+  @import "footer";
+
+  @import "../partial/language";
+
+}

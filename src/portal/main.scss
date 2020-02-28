@@ -1,0 +1,156 @@
+@import "../common";
+@import "icon-tool";
+
+$box: 110px;
+$pad: 10px;
+$line-size: 20px;
+$font-size: 15px;
+
+// General Styles
+
+.icon_wrap {
+  background-color: transparent !important;
+  min-height: 170px;
+  border-bottom: 1px solid $bg-weak-lv1;
+  padding: 30px 0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .title01 {
+    padding: 0;
+    margin: 0;
+    width: $box;
+    height: $box;
+    border: 8px solid $gold;
+    border-radius: 0%;
+    background-color: transparent;
+
+    & > p {
+      color: $gold;
+      cursor: default;
+    }
+  }
+
+  ul.w06 li {
+    width: calc(20% - 2px);
+    min-width: $box;
+    margin-bottom: 0;
+    height: $box;
+  }
+
+  ul li {
+    a {
+      height: $box - $line-size;
+      padding: $pad 0;
+
+      p {
+        background: transparent;
+        border: none;
+        width: $box - 2 * $pad - $line-size;
+        height: $box - 2 * $pad - $line-size;
+        padding: $pad;
+        transition: transform $ts, background-color $ts;
+        border-radius: 0;
+
+        img {
+          width: auto;
+          max-height: $icon;
+        }
+      }
+
+      &:hover, &:focus {
+        p {
+          transform: scale(1.2);
+          background-color: rgba($gold, .15);
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    span {
+      margin-top: $line-size - $font-size;
+      font-size: $font-size;
+      line-height: $line-size;
+      cursor: default;
+      color: $fg !important;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  $mobile-margin: 20px;
+
+  .icon_wrap {
+    margin-top: $mobile-margin;
+
+    ul.w06 li {
+      margin-bottom: $mobile-margin;
+    }
+  }
+}
+
+// Icon-specific Styles
+#postech- {
+  &povis-web {
+    @include iconReplace(
+      "custom-povis.png",
+      70px, 15px,
+    );
+    @include expandWidth(10px);
+  }
+
+  &kyobo {
+    @include iconReplace(
+      "custom-kyobo.png",
+      60px, 45.95px,
+    );
+    @include expandWidth(5px);
+  }
+
+  &bookcube {
+    @include iconReplace(
+      "custom-bookcube.png",
+      50px, 50px,
+    );
+  }
+
+  &bookzip {
+    @include iconReplace(
+      "custom-bookzip.png",
+      60px, 17px,
+    );
+    @include expandWidth(5px);
+  }
+
+  &moazine {
+    @include iconReplace(
+      "custom-moazine.png",
+      60px, 21px,
+    );
+    @include expandWidth(5px);
+  }
+
+  &pipa {
+    @include iconReplace(
+      "custom-pipa.png",
+      38px, 46px,
+    );
+    @include expandWidth(-6px);
+    @include expandHeight(-2px);
+  }
+
+  &sdisk {
+    @include iconReplace(
+      "custom-sdisk.png",
+      50px, 49px,
+    );
+  }
+
+  &hemos {
+    @include expandWidth(5px);
+    @include resizeImage(60px);
+  }
+}
