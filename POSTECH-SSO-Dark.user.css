@@ -2,7 +2,7 @@
 @name         POSTECH Dark SSO
 @namespace    gist.github.com/wldh-g/0f63065237bc5831df10ae17fe96d2b4
 @homepageURL  https://github.com/wldh-g/postech-sso-dark
-@version      1.0.3
+@version      1.0.4
 @license      Other
 @description  This enables dark theme of POVIS SSO login page.
 @author       Jio Gim (https://github.com/wldh-g/)
@@ -76,7 +76,7 @@
 @-moz-document url-prefix("https://sso.postech.ac.kr/sso/usr/postech/login/view") { body#login-bg { background-color: #111; color: #eee; }
   .layer-wrap { background-color: #333; border: none; }
   .layer-wrap h1 { margin: 16px auto 20px; }
-  .layer-wrap h2 { color: #eee; }
+  .layer-wrap h2, .layer-wrap h2 span { color: #eee !important; }
   .layer-wrap h2 p { color: #aaa; margin-bottom: 26px; }
   .layer-wrap ul li input { background-color: #444; color: #ccc; transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; border: none; }
   .layer-wrap ul li input:hover { background-color: #555; }

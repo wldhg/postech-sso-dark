@@ -1,11 +1,12 @@
 {
+	"version": "1.0.4",
+	"version-notice": "CHANGE VERSION IN GULPFILE.JS!",
 	"name": "postech-sso-dark",
-	"version": "1.0.3",
 	"description": "Dark usercss for POSTECH SSO login & portal.",
-	"main": "gulpfile.js",
-	"repository": "https://github.com/wldh-g/postech-sso-dark.git",
 	"author": "Jio <jio@wldh.org>",
 	"license": "UNLICENSED",
+	"main": "gulpfile.js",
+	"repository": "https://github.com/wldh-g/postech-sso-dark.git",
 	"private": true,
 	"scripts": {
 		"watch": "npx gulp watch",

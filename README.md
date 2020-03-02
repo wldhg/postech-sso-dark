@@ -40,7 +40,7 @@ To Do
 
 - [ ] Clearify Icons (POVIS, PIPA, Bookzip)
 - [ ] Chang Icon Layout (HEMOS)
-- [*] Covert to SASS
+- [x] Covert to SASS
 - [ ] Change to padding transition, not tranform-scaling.
 
 License
