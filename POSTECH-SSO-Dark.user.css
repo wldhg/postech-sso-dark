@@ -2,7 +2,7 @@
 @name         POSTECH Dark SSO
 @namespace    gist.github.com/wldh-g/0f63065237bc5831df10ae17fe96d2b4
 @homepageURL  https://github.com/wldh-g/postech-sso-dark
-@version      1.0.4
+@version      1.0.5
 @license      Other
 @description  This enables dark theme of POVIS SSO login page.
 @author       Jio Gim (https://github.com/wldh-g/)
@@ -11,13 +11,22 @@
 
 @-moz-document domain("login.postech.ac.kr") { body { background-color: #111; color: #eee; }
   header { padding-bottom: 8px; color: #aaa; }
+  header .header_wrap h1 a { width: 150px !important; height: 21px !important; }
+  header .header_wrap h1 a:hover, header .header_wrap h1 a:focus { filter: grayscale(40%); }
   header .header_utill { margin-top: 7px; }
   header .header_utill > a { cursor: pointer; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/hamburger-off.png); }
   header .header_utill > a:hover, header .header_utill > a:focus { color: #eee; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/hamburger-on.png); }
   header .header_utill > ul { z-index: 10; color: #111; font-weight: 600; }
+  header .header_utill > ul li:not(:last-of-type) { margin-bottom: 4px; }
+  header .header_utill > ul li a { color: #eee; text-shadow: 0 0 3px #111; transition: background-color 0.2s ease-in-out; padding: 8px 21px; }
+  header .header_utill > ul li a:hover, header .header_utill > ul li a:focus { transition: none; background-color: rgba(17, 17, 17, 0.4); }
   .visual { position: relative; margin-bottom: 30px; }
   .visual::before { content: ''; width: 100%; top: 0; bottom: 0; position: absolute; background-color: #111; opacity: .6; display: block; z-index: 0; }
   .visual p { position: relative; color: #eee; cursor: default; }
+  .visual p, .visual p strong { -moz-user-select: text !important; user-select: text !important; }
+  @media screen and (max-width: 930px) { header .header_utill { margin-top: 26px; padding-bottom: 6px; }
+    header .header_utill ul { padding: 5px 0 5px 5px; }
+    header .header_utill ul li:not(:last-of-type) { margin-bottom: 0; } }
   .search_ro { margin-bottom: 15px; }
   .search_ro .search_ro_container { border-color: #333; transition: border-color 0.2s ease-in-out; width: calc(100% - 60px); }
   .search_ro .search_ro_container .search_type_list ul li:hover a, .search_ro .search_ro_container .search_type_list ul li.active a { color: #eee; }
@@ -42,7 +51,7 @@
   .icon_wrap ul li a p { background: transparent; border: none; width: 70px; height: 70px; padding: 10px; transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; border-radius: 0; }
   .icon_wrap ul li a p img { width: auto; max-height: 50px; }
   .icon_wrap ul li a:hover p, .icon_wrap ul li a:focus p { transform: scale(1.2); background-color: rgba(187, 160, 120, 0.15); border: none; box-shadow: none; }
-  .icon_wrap ul li span { margin-top: 5px; font-size: 15px; line-height: 20px; cursor: default; color: #eee !important; }
+  .icon_wrap ul li span { margin-top: 5px; font-size: 15px; line-height: 20px; font-weight: 300 !important; letter-spacing: -.32px; cursor: default; color: #eee !important; }
   @media screen and (max-width: 930px) { .icon_wrap { margin-top: 20px; }
     .icon_wrap ul.w06 li { margin-bottom: 20px; } }
   #postech-povis-web p::after, #postech-povis-web-eng p::after { content: ''; display: table-cell; left: 0; top: 0; background-size: cover; background-image: url(https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/custom-povis.png); width: 66px; height: 14px; }
@@ -68,10 +77,14 @@
   #postech-hemos p, #postech-hemos-eng p { padding-left: 5px; padding-right: 5px; }
   #postech-hemos p img, #postech-hemos-eng p img { width: 60px !important; }
   footer { background-color: transparent; }
-  footer p { color: #aaa; cursor: default; }
+  footer p { color: #aaa; cursor: default; max-width: 85vw; margin: auto; }
   .language a.on { color: #111; font-weight: 600; cursor: default; }
   .language a:not(.on) { transition: background-color 0.2s ease-in-out; }
-  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); } }
+  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); color: #eee; }
+  body input[type="text"], body input[type="password"] { -moz-user-select: text !important; user-select: text !important; }
+  body, body * { -moz-user-select: none; user-select: none; }
+  body::-moz-selection, body *::-moz-selection { background-color: #c61065 !important; color: #eee !important; font-weight: 600 !important; }
+  body::selection, body *::selection { background-color: #c61065 !important; color: #eee !important; font-weight: 600 !important; } }
 
 @-moz-document url-prefix("https://sso.postech.ac.kr/sso/usr/postech/login/view") { body#login-bg { background-color: #111; color: #eee; }
   .layer-wrap { background-color: #333; border: none; }
@@ -94,7 +107,11 @@
   @media screen and (max-width: 430px) { .login-utill a { width: initial; } }
   footer.main { margin-top: 10px; }
   footer.main p { color: #eee; }
-  footer.main p.c_gold { color: #bba078; }
+  footer.main p.c_gold { color: #bba078; -moz-user-select: text !important; user-select: text !important; }
   .language a.on { color: #111; font-weight: 600; cursor: default; }
   .language a:not(.on) { transition: background-color 0.2s ease-in-out; }
-  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); } }
+  .language a:not(.on):hover, .language a:not(.on):focus { transition: none; background-color: rgba(200, 200, 200, 0.4); color: #eee; }
+  body input[type="text"], body input[type="password"] { -moz-user-select: text !important; user-select: text !important; }
+  body, body * { -moz-user-select: none; user-select: none; }
+  body::-moz-selection, body *::-moz-selection { background-color: #c61065 !important; color: #eee !important; font-weight: 600 !important; }
+  body::selection, body *::selection { background-color: #c61065 !important; color: #eee !important; font-weight: 600 !important; } }

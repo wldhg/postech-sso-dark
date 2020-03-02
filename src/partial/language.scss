@@ -13,6 +13,7 @@
     &:hover, &:focus {
       transition: none;
       background-color: rgba(200, 200, 200, .4);
+      color: $fg;
     }
   }
 }

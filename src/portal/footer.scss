@@ -6,5 +6,7 @@ footer {
   p {
     color: $fg-weak-lv2;
     cursor: default;
+    max-width: 85vw;
+    margin: auto;
   }
 }

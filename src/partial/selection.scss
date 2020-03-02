@@ -1,0 +1,17 @@
+@import "../common";
+
+body {
+  input[type="text"], input[type="password"] {
+    user-select: text !important;
+  }
+
+  &, * {
+    user-select: none;
+
+    &::selection {
+      background-color: $postech !important;
+      color: $fg !important;
+      font-weight: 600 !important;
+    }
+  }
+}

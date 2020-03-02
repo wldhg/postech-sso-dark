@@ -8,6 +8,7 @@ footer.main {
 
     &.c_gold {
       color: $gold;
+      user-select: text !important;
     }
   }
 }

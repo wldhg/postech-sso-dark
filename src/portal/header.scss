@@ -4,6 +4,15 @@ header {
   padding-bottom: 8px;
   color: $fg-weak-lv2;
 
+  .header_wrap h1 a {
+    width: 150px !important;
+    height: 21px !important;
+
+    &:hover, &:focus {
+      filter: grayscale(40%);
+    }
+  }
+
   .header_utill {
     margin-top: 7px;
 
@@ -21,6 +30,24 @@ header {
       z-index: 10;
       color: $bg;
       font-weight: 600;
+
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 4px;
+        }
+
+        a {
+          color: $fg;
+          text-shadow: 0 0 3px $bg;
+          transition: background-color $ts;
+          padding: 8px 21px;
+
+          &:hover, &:focus {
+            transition: none;
+            background-color: rgba($bg, .4);
+          }
+        }
+      }
     }
   }
 }
@@ -45,5 +72,25 @@ header {
     position: relative;
     color: $fg;
     cursor: default;
+
+    &, strong {
+      // Let selection limitation free for here to enhance users' mental stability by abling selecting some texts
+      user-select: text !important;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  header .header_utill {
+    margin-top: 26px;
+    padding-bottom: 6px;
+
+    ul {
+      padding: 5px 0 5px 5px;
+
+      li:not(:last-of-type) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

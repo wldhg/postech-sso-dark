@@ -75,6 +75,8 @@ $font-size: 15px;
       margin-top: $line-size - $font-size;
       font-size: $font-size;
       line-height: $line-size;
+      font-weight: 300 !important;
+      letter-spacing: -.32px;
       cursor: default;
       color: $fg !important;
     }
