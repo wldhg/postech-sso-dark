@@ -1,5 +1,7 @@
 // Variables
-$image-location: "https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/";
+$github-image-location: "https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/images/";
+$bitbucket-image-location: "https://bitbucket.org/wldh/postech-sso-dark/raw/master/images/";
+$gitlab-image-location: "https://gitlab.com/wldh/postech-sso-dark/-/raw/master/images/";
 
 $bg: #111;
 $bg-weak-lv1: #333;
@@ -20,6 +22,18 @@ $ts-fn: ease-in-out;
 $ts: #{$ts-time} #{$ts-fn};
 
 // Functions
+@function githubImg($name) {
+  @return #{url(#{$github-image-location + $name})};
+}
+
+@function bitbucketImg($name) {
+  @return #{url(#{$bitbucket-image-location + $name})};
+}
+
+@function gitlabImg($name) {
+  @return #{url(#{$gitlab-image-location + $name})};
+}
+
 @function img($name) {
-  @return #{url(#{$image-location + $name})};
+  @return githubImg($name), gitlabImg($name), bitbucketImg($name);
 }

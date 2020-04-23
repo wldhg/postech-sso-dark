@@ -1,5 +1,5 @@
 {
-	"version": "1.0.5",
+	"version": "1.0.7",
 	"version-notice": "CHANGE VERSION IN GULPFILE.JS!",
 	"name": "postech-sso-dark",
 	"description": "Dark usercss for POSTECH SSO login & portal.",

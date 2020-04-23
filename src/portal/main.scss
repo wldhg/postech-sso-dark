@@ -13,7 +13,7 @@ $font-size: 15px;
   background-color: transparent !important;
   min-height: 170px;
   border-bottom: 1px solid $bg-weak-lv1;
-  padding: 30px 0;
+  padding: 30px 0 10px;
 
   &:last-of-type {
     border-bottom: none;
@@ -37,7 +37,7 @@ $font-size: 15px;
   ul.w06 li {
     width: calc(20% - 2px);
     min-width: $box;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     height: $box;
   }
 
@@ -88,6 +88,7 @@ $font-size: 15px;
 
   .icon_wrap {
     margin-top: $mobile-margin;
+    padding: 30px 0 30px;
 
     ul.w06 li {
       margin-bottom: $mobile-margin;
