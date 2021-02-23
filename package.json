@@ -1,5 +1,5 @@
 {
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"version-notice": "CHANGE VERSION IN GULPFILE.JS!",
 	"name": "postech-sso-dark",
 	"description": "Dark usercss for POSTECH SSO login & portal.",
@@ -9,18 +9,16 @@
 	"repository": "https://github.com/wldh-g/postech-sso-dark.git",
 	"private": true,
 	"scripts": {
-		"watch": "npx gulp watch",
-		"build": "npx gulp build"
+		"watch": "yarn gulp watch",
+		"build": "yarn gulp build"
 	},
 	"dependencies": {
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-concat": "^2.6.1",
+		"gulp-dart-sass": "^1.0.2",
 		"gulp-header": "^2.0.9",
-		"gulp-sass": "^4.0.2",
 		"gulp-trim": "^1.0.2",
-		"node-gyp": "^6.1.0",
-		"node-sass": "^4.13.1",
 		"update-json-file": "^1.1.1"
 	}
 }

@@ -157,4 +157,11 @@ $font-size: 15px;
     @include expandWidth(5px);
     @include resizeImage(60px);
   }
+
+  &rtsc {
+    @include iconReplace(
+      "custom-gear.png",
+      49px, 50px,
+    );
+  }
 }
