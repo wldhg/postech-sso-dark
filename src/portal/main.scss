@@ -164,4 +164,11 @@ $font-size: 15px;
       49px, 50px,
     );
   }
+
+  &counseling {
+    @include iconReplace(
+      "custom-counseling.png",
+      49px, 50px,
+    );
+  }
 }

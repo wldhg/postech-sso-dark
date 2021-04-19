@@ -9,7 +9,7 @@ const gAutoPrefixer = require('gulp-autoprefixer');
 const updateJSON = require('update-json-file');
 
 // Set Package Information
-const version = '1.0.8';
+const version = '1.0.9';
 
 // Build style
 const buildSass = () => gulp.src([
