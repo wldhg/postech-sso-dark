@@ -27,13 +27,13 @@ You can download Stylus from the links below:
 
 After installing Stylus, you can click the button below and the dark mode installation page will be shown up automatically.
 
-📦 [Install POSTECH SSO Dark Mode](https://raw.githubusercontent.com/wldh-g/postech-sso-dark/master/POSTECH-SSO-Dark.user.css).
+📦 [Install POSTECH SSO Dark Mode](https://raw.githubusercontent.com/wldhg/postech-sso-dark/master/POSTECH-SSO-Dark.user.css).
 
 Then you can press "Install style" button. The installation will be done and and the application will be finished.
 
 Because automatic style updating is enabled, the extension will often check for update of this dark mode.
 
-If any bugs are found, please [make an issue](https://github.com/wldh-g/postech-sso-dark/issues/new), then I'll update this mod quickly.
+If any bugs are found, please [make an issue](https://github.com/wldhg/postech-sso-dark/issues/new), then I'll update this mod quickly.
 
 To Do
 -----
